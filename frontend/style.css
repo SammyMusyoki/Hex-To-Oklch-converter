@@ -136,4 +136,41 @@ pre {
     width: auto;
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.theme-section button:hover {
+    background: #4f46e5;
+    transform: translateY(-1px);
+}
+
+.theme-section button.copied {
+    background: #10b981;
+}
+
+/* Toast notification styles */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    z-index: 1000;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+.toast-success {
+    background: #10b981;
+}
+
+.toast-error {
+    background: #ef4444;
 }
