@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKLCH Theme Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OKLCH Theme Generator</h1>
+        <p>Generate CSS variables with accurate OKLCH color values</p>
+        
+        <form id="colorForm">
+            <div class="color-inputs">
+                <div class="input-group">
+                    <label for="primary">Primary Color</label>
+                    <input type="color" id="primary" value="#6366f1" required>
+                    <input type="text" id="primaryHex" value="#6366f1" placeholder="#000000">
+                </div>
+                
+                <div class="input-group">
+                    <label for="light">Light Theme Base</label>
+                    <input type="color" id="light" value="#ffffff" required>
+                    <input type="text" id="lightHex" value="#ffffff" placeholder="#ffffff">
+                </div>
+                
+                <div class="input-group">
+                    <label for="dark">Dark Theme Base</label>
+                    <input type="color" id="dark" value="#1a1a1a" required>
+                    <input type="text" id="darkHex" value="#1a1a1a" placeholder="#000000">
+                </div>
+            </div>
+            
+            <button type="submit">Generate OKLCH Theme</button>
+        </form>
+        
+        <div id="loading" class="loading hidden">Converting colors...</div>
+        <div id="error" class="error hidden"></div>
+        
+        <div id="output" class="output hidden">
+            <h2>Generated CSS Variables</h2>
+            <div class="theme-section">
+                <h3>Light Theme</h3>
+                <pre id="lightTheme"></pre>
+                <button onclick="copyToClipboard('lightTheme')">Copy Light Theme</button>
+            </div>
+            
+            <div class="theme-section">
+                <h3>Dark Theme</h3>
+                <pre id="darkTheme"></pre>
+                <button onclick="copyToClipboard('darkTheme')">Copy Dark Theme</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

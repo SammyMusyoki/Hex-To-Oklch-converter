@@ -1,0 +1,7 @@
+
+colour-science
+flask
+flask-cors
+numpy
+networkx
+
